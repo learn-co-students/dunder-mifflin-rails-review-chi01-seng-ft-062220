@@ -1,0 +1,31 @@
+<%= form_for @employee do |f| %>
+    <% if @employee.errors.any? %>
+        <div id="error_explanations">
+            <h2>The following <%= pluralize(@employee.errors.count, "error") %> need(s) to be corrected:</h2>
+                <% @employee.errors.full_messages.each do |message| %><br>
+                    <%= message %>
+                <% end %>
+        </div>
+    <% end %><br>
+
+
+    <%= f.label :first_name %>:
+    <%= f.text_field :first_name %><br>
+
+    <%= f.label :last_name %>:
+    <%= f.text_field :last_name %><br>
+
+    <%= f.label :alias %>:
+    <%= f.text_field :alias%><br>
+
+    <%= f.label :title %>:
+    <%= f.text_field :title%><br>
+
+    <%= f.label :office %>:
+    <%= f.text_field :office%><br>
+
+    <%= f.label :my_dog %>:
+    <%= f.collection_select :dog_id, Dog.all, :id, :name%><br>
+   
+    <br><%= f.submit %>
+<% end %>

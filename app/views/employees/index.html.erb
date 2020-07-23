@@ -1,0 +1,6 @@
+<h3>Dunder Employees</h3>
+<% @employees.each do |employee| %>
+    <li><%= link_to employee.name, employee_path(employee) %></li>
+<% end %><br>
+
+<%= button_to "Add Employee", new_employee_path, method: :get %>

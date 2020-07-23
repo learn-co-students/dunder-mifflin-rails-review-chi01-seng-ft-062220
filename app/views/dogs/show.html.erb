@@ -1,0 +1,13 @@
+<h2><%= @dog.name %>'s Information</h2>
+
+<h4>Breed: <%= @dog.breed %><br></h4>
+<h4>Age: <%= @dog.age %></h4>
+<h4>My Owners:</h4>
+<% @dog.employees.each do |employee| %>
+    <li><%= employee.name %></li>
+<% end %>
+
+<%= button_to "Back to Home Page", dogs_path, method: :get %>
+
+
+
