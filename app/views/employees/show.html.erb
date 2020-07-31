@@ -1,0 +1,13 @@
+<%= image_tag @employee.img_url, size: "480x320" %>
+
+<h4>Name: <%= @employee.name %></h4>
+<h4>Alias: <%= @employee.alias %></h4>
+<h4>Office: <%= @employee.office %></h4>
+<h4>Title: <%= @employee.title %></h4>
+<h4>My Dog: <%= @employee.dog.name %></h4>
+
+<%= button_to "Edit Employee Information", edit_employee_path(@employee), method: :get %>
+<%= button_to "Home Page", employees_path, method: :get %>
+
+
+ 5  config/routes.rb 
