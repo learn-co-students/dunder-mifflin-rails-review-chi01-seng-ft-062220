@@ -1,0 +1,8 @@
+
+<h2>Some of the dogs!!</h2>
+
+<% @ordered.each do |dog| %>
+    <li><%= link_to dog.name, dog_path(dog) %></li>
+<% end %><br>
+
+<%= button_to "Back to Unsorted List", dogs_path, method: :get %>
